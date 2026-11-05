@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Navbar from '../../../components/Navbar'
+import Navbar from '@/components/Navbar'
 
 export default function AttendancePage() {
   const [attendance, setAttendance] = useState([
@@ -13,7 +13,7 @@ export default function AttendancePage() {
   const toggleStatus = (id: string) => {
     setAttendance(attendance.map(p => {
       if (p.id === id) {
-        const nextStatus = p.Status === 'Present' ? 'Late' : p.status === 'Late' ? 'Absent' : 'Present'
+        const nextStatus = p.status === 'Present' ? 'Late' : p.status === 'Late' ? 'Absent' : 'Present'
         return { ...p, status: nextStatus }
       }
       return p

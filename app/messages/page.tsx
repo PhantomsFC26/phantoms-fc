@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { supabase } from '../lib/supabase'
-import Navbar from '../components/Navbar'
+import { supabase } from '@/lib/supabase'
+import Navbar from '@/components/Navbar'
 import Link from 'next/link'
 
 export default function Home() {
